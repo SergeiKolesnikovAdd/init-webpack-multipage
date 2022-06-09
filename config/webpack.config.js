@@ -29,11 +29,6 @@ const getHtmlTemplate = () =>
           template: template.path,
           chunks: [template.name.toString()],
           filename: `${template.name}.html`,
-          favicon: path.resolve(
-            environment.paths.source,
-            "images",
-            "favicon.ico"
-          ),
         })
     );
 
@@ -63,6 +58,7 @@ module.exports = {
             path.join(__dirname, "../src/html"),
             path.join(__dirname, "../src/html/sections"),
             path.join(__dirname, "../src/html/components"),
+            path.join(__dirname, "../src/html/svg"),
           ],
           helperDirs: [path.join(__dirname, "../src/helpers")],
         },

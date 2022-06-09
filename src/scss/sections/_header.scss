@@ -1,0 +1,250 @@
+@use "../global" as *;
+@use "../foundation" as *;
+
+.header {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  height: 83px;
+  pointer-events: none;
+
+  &__logo {
+    pointer-events: all;
+    display: inline-flex;
+
+    &-devian-svg {
+      width: $logoDevianWidthLg;
+      height: $logoHeightLg;
+    }
+
+    &-t-svg {
+      width: $logoTWidthLg;
+      height: $logoHeightLg;
+    }
+  }
+
+  &__overflow-inner {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding-top: $offsetLg;
+  }
+
+  &__overflow-wrapper {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+
+    &_bottom {
+      bottom: 0;
+
+      .header__overflow-inner {
+        bottom: 0;
+      }
+    }
+    &_top {
+      top: 0;
+
+      .header__overflow-inner {
+        top: 0;
+      }
+    }
+
+    &_white {
+      .link {
+        &::before {
+          background-color: $white;
+        }
+      }
+      .burger-btn {
+        &__line {
+          &::after {
+            background-color: $white;
+          }
+
+          &::before {
+            background-color: $white;
+          }
+        }
+      }
+
+      .text {
+        color: $white;
+      }
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__works {
+    display: flex;
+    margin-right: 60px;
+  }
+
+  &__works-number {
+    margin-left: $offsetLg;
+  }
+
+  &__contacts {
+    text-align: right;
+  }
+}
+
+.burger-btn {
+  display: none;
+  pointer-events: all;
+  height: $logoHeightMd2;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &_active {
+    .burger-btn {
+      &__line {
+        &::after {
+          transform: rotate(45deg) translateY(-1px);
+        }
+
+        &::before {
+          transform: rotate(-45deg) translateY(-1px);
+        }
+      }
+    }
+  }
+
+  &__line {
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 40px;
+      background-color: $black;
+      transform: translateY(-5px);
+      transition: transform 0.3s;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 40px;
+      background-color: $black;
+      transform: translateY(5px);
+      transition: transform 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .header {
+    height: 75px;
+
+    &__logo {
+      &-devian-svg {
+        width: $logoDevianWidthMd;
+        height: $logoHeightMd;
+      }
+
+      &-t-svg {
+        width: $logoTWidthMd;
+        height: $logoHeightMd;
+      }
+    }
+
+    &__works-number {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .header {
+    height: 43px;
+
+    &__overflow-inner {
+      align-items: center;
+      padding-top: $offsetMd2;
+    }
+
+    &__logo {
+      &-devian-svg {
+        width: $logoDevianWidthMd2;
+        height: $logoHeightMd2;
+      }
+
+      &-t-svg {
+        width: $logoTWidthMd2;
+        height: $logoHeightMd2;
+      }
+    }
+
+    .link {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $phone-width) {
+    .header {
+      height: 36px;
+
+      &__overflow-inner {
+        align-items: center;
+        padding-top: $offsetSm2;
+      }
+
+      &__logo {
+        &-devian-svg {
+          width: $logoDevianWidthSm;
+          height: $logoHeightSm;
+        }
+
+        &-t-svg {
+          width: $logoTWidthSm;
+          height: $logoHeightSm;
+        }
+      }
+    }
+
+    .burger-btn {
+      height: $logoHeightSm;
+      width: 32px;
+
+      &__line {
+        &::after {
+          width: 32px;
+        }
+
+        &::before {
+          width: 32px;
+        }
+      }
+    }
+
+    .burger-menu {
+      .header {
+        &__lang {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $phone-width) and (max-width: $tablet-lg-width) and (max-height: 580px) {
+    .burger-menu {
+      .footer__sub-info {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $phone-width) and (max-height: 540px) {
+    .burger-menu {
+      .footer__sub-info {
+        display: none;
+      }
+    }
+  }
+}

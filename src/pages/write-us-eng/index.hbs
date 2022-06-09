@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head}}
+<body>
+  {{> header-eng
+      color-1="black"
+      color-2="white"
+      write-us-link="/write-us.html"
+      height-1="height:100%"}}
+  {{> burger-menu-eng
+      write-us-link="/write-us.html"}}
+  <main class="main">
+    {{> form-section-eng}}
+    {{> footer-write-us-eng
+        data-header-color="black"
+        line-color="black"
+        main-color="black"
+        hover-color="red"
+        theme-controller="ignore-theme"
+    }}
+  </main>
+</body>
+</html>

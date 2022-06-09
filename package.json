@@ -1,6 +1,6 @@
 {
   "author": "Deviant (https://www.deviant-studio.com/)",
-  "name": "STUB_DEVIANT_NAME",
+  "name": "deviant-main-site",
   "version": "0.0.1",
   "description": "",
   "browserslist": [
@@ -8,6 +8,8 @@
     "> 5%"
   ],
   "dependencies": {
+    "splitting": "^1.0.6",
+    "is-touch-device": "^1.0.1",
     "smooth-scrollbar": "^8.7.4"
   },
   "devDependencies": {

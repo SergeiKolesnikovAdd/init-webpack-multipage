@@ -1,0 +1,101 @@
+<footer class="footer main-padding" data-header-color="white">
+  <div class="advantages advantages_links hover_color_{{line-color}}
+              text_transform_uppercase"
+       style="border-color: {{line-color}}">
+    {{> footer-link
+        link=""
+        text="Facebook"
+        line-color="white"
+        hover-color="gray"
+        main-color="white"
+        theme-controller="ignore-theme"
+    }}
+    {{> footer-link
+        link=""
+        text="Instagram"
+        line-color="white"
+        hover-color="gray"
+        main-color="white"
+        theme-controller="ignore-theme"
+    }}
+    {{> footer-link
+        link="https://www.behance.net/vasiliykiselev"
+        text="Behance"
+        line-color="white"
+        hover-color="gray"
+        main-color="white"
+        theme-controller="ignore-theme"
+    }}
+    {{> footer-link
+        link="https://t.me/leroyJS"
+        text="Telegram"
+        line-color="white"
+        hover-color="gray"
+        main-color="white"
+        theme-controller="ignore-theme"
+    }}
+  </div>
+  <div class="footer__buttons-wrapper"
+       style="color:{{main-color}}">
+    <a
+      href="/write-us-eng.html"
+      class="footer__button text text_color_{{main-color}}
+             text_type_h1 button button_type_main button_color_{{button-color}}
+             text_transform_uppercase hover_transition_xs {{theme-controller}}"
+      >
+      write us
+    </a>
+  </div>
+  <div class="footer__sub-info" 
+       style="color:{{main-color}}">
+    <div class="half footer__left-column">
+      {{> footer-time-eng
+          main-color="white"
+          second-color="whietA40"
+      }}
+      <a
+        href=""
+        class="footer__sub-links footer__sub-links_mobile half {{theme-controller}}
+               text_transform_uppercase hover_color_{{hover-color}}
+               hover_transition_xs"
+      >
+        <span class="text text_color_{{main-color}} text_type_h2">privacy policy</span>
+      </a>
+    </div>
+    <div class="half footer__right-column">
+      <div class="footer__contacts half text_transform_uppercase">
+        <a
+          href="mailto:hello@deviant-studio.com"
+          class="text text_color_{{main-color}}
+                 text_type_h2 hover_color_{{hover-color}}
+                 hover_transition_xs {{theme-controller}}"
+          >
+          hello@deviant-studio.com
+        </a>
+        <a
+          href="tel:+79512700000"
+          class="text text_color_{{main-color}} {{theme-controller}}
+                 text_type_h2 hover_color_{{hover-color}}
+                 hover_transition_xs"
+          >
+          8 (951) 270 — 00 — 00
+        </a>
+      </div>
+      <a
+        href=""
+        class="footer__sub-links footer__sub-links_desktop half {{theme-controller}}
+               text_transform_uppercase hover_color_{{hover-color}}
+               hover_transition_xs"
+        >
+        <span class="{{theme-controller}} text text_color_{{main-color}} text_type_h2">
+          privacy policy
+        </span>
+      </a>
+      <div class="footer__cop text text_color_whietA40 text_type_desc {{theme-controller}}">
+        ©2020 Deviant.
+        <br />
+        Complex digital—solutions
+      </div>
+    </div>
+  </div>
+</footer>

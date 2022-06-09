@@ -1,0 +1,21 @@
+@use "../global" as *;
+@use "../foundation" as *;
+.not-found {
+    min-height: 100vh;
+    background-color: $red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  .footer {
+    width: 100%;
+  
+    &__sub-info {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  

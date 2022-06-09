@@ -1,0 +1,314 @@
+@use "../global" as *;
+@use "../foundation" as *;
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  .header__overflow-inner {
+    width: auto;
+  }
+
+  &__logo {
+    width: 32px;
+    height: 40px;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 100;
+    pointer-events: none;
+
+    &_white {
+      color: $bg;
+    }
+  }
+
+  &-wrapper {
+    transform: translateY(-10%);
+    display: inline-flex;
+    overflow: hidden;
+
+    &-inner {
+      line-height: 100%;
+      display: inline-block;
+      transform: translateY(110%);
+    }
+  }
+
+  &-opacity {
+    opacity: 0;
+  }
+
+  &-appearance-step {
+    &-0 {
+      &-0 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-1 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-2 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-3 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+    }
+    &-1 {
+      &-0 {
+        transition: opacity 0.7s 0.8s, transform 0.7s 0.8s;
+      }
+
+      &-1 {
+        transition: opacity 0.7s 1.2s, transform 0.7s 1.2s;
+      }
+
+      &-2 {
+        transition: opacity 0.7s 1.5s, transform 0.7s 1.5s;
+      }
+      &-3 {
+        transition: opacity 0.7s 1.8s, transform 0.7s 1.8s;
+      }
+    }
+    &-2 {
+      &-0 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-1 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-2 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-3 {
+        transition: opacity 0.7s 2.5s;
+      }
+    }
+  }
+
+  &-appearance-step-eng {
+    &-0 {
+      &-0 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-1 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-2 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+
+      &-3 {
+        transition: opacity 0.5s 0.5s, transform 0.3s 0.5s;
+      }
+    }
+    &-1 {
+      &-0 {
+        transition: opacity 0.7s 0.8s, transform 0.7s 0.8s;
+      }
+
+      &-1 {
+        transition: opacity 0.7s 1.2s, transform 0.7s 1.2s;
+      }
+
+      &-2 {
+        transition: opacity 0.7s 1.5s, transform 0.7s 1.5s;
+      }
+      &-3 {
+        transition: opacity 0.7s 1.8s, transform 0.7s 1.8s;
+      }
+    }
+    &-2 {
+      &-0 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-1 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-2 {
+        transition: opacity 0.7s 2.5s;
+      }
+
+      &-3 {
+        transition: opacity 0.7s 2.5s;
+      }
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    background-color: $red;
+    height: 100%;
+    width: 0px;
+    overflow: hidden;
+  }
+}
+
+body:not(.ready) {
+  .scrollbar-track {
+    opacity: 0;
+  }
+}
+
+.header {
+  &__logo-devian-wrapper {
+    overflow: hidden;
+    width: 0;
+    transition: width 0.7s 0.5s;
+  }
+}
+
+.preloader-section {
+  opacity: 0;
+}
+
+.loaded {
+  .preloader-section {
+    opacity: 1;
+  }
+
+  .preloader {
+    transition: transform 0s 2s;
+    transform: translateX(100%);
+
+    &__bar {
+      transition: transform 1s;
+      transform: translateX(100%);
+    }
+
+    &__cursor {
+      opacity: 0;
+      transition: opacity 0.3s 0.3s;
+    }
+
+    &-opacity {
+      opacity: 1;
+    }
+
+    &-wrapper {
+      &-inner {
+        transform: translateY(10%);
+      }
+    }
+
+    .header__overflow-inner {
+      width: 100%;
+      transition: transform 1s;
+      transform: translateX(-100%);
+    }
+  }
+
+  .header {
+    &__logo-devian-wrapper {
+      width: $logoDevianWidthLg;
+    }
+  }
+}
+
+.preloader-stroke {
+  stroke-dasharray: 0 99999;
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .preloader {
+    &__logo {
+      width: $logoTWidthMd;
+      height: $logoHeightMd;
+    }
+  }
+
+  .loaded {
+    .header {
+      &__logo-devian-wrapper {
+        width: $logoDevianWidthMd;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .preloader {
+    &__logo {
+      width: $logoTWidthMd2;
+      height: $logoHeightMd2;
+    }
+  }
+
+  .loaded {
+    .header {
+      &__logo-devian-wrapper {
+        width: $logoDevianWidthMd2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .loaded {
+    .advantages {
+      &__line {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .header {
+      &__logo-devian-wrapper {
+        width: $logoDevianWidthSm;
+      }
+    }
+  }
+
+  .preloader {
+    &__logo {
+      width: 80px;
+      height: 100px;
+      position: absolute;
+      left: 50vw;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header__overflow-inner {
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      width: 100vw;
+    }
+  }
+
+  body:not(.loaded) {
+    .header {
+      opacity: 0;
+    }
+
+    .preloader {
+      &__logo {
+        &_mobile {
+          display: block;
+        }
+      }
+    }
+  }
+}

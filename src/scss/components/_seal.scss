@@ -1,0 +1,31 @@
+@use "../global" as *;
+@use "../foundation" as *;
+
+.seal {
+  height: $sealLg;
+  width: $sealLg;
+  path {
+    transition: stroke 0.3s, fill 0.3s;
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .seal {
+    height: $sealMd;
+    width: $sealMd;
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .seal {
+    height: $sealMd2;
+    width: $sealMd2;
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .seal {
+    height: $sealSm;
+    width: $sealSm;
+  }
+}

@@ -1,0 +1,144 @@
+@use "../global" as *;
+@use "../foundation" as *;
+.deviant-circle {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  overflow: hidden;
+
+  &__main-wrapper {
+    transform: rotateX(10deg);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  &__main {
+    height: 1em;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    animation: deviantCircleAnimation 5s linear infinite;
+    transform: perspective(1200px);
+
+    .char {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform-origin: center;
+      transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(390px);
+      display: block;
+      min-width: 74px;
+      text-align: center;
+
+      &[data-char="T"] {
+        transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(390px)
+          rotateZ(180deg) translateY(4px);
+      }
+    }
+
+    .word {
+      position: relative;
+      display: block;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+  }
+  &_red {
+    background-color: $red;
+
+    .char {
+      color: $white;
+    }
+  }
+}
+
+@keyframes deviantCircleAnimation {
+  0% {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+
+  100% {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .deviant-circle {
+    .char {
+      transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(340px);
+
+      &[data-char="T"] {
+        transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(340px)
+          rotateZ(180deg) translateY(4px);
+      }
+    }
+  }
+
+  @keyframes deviantCircleAnimation {
+    0% {
+      transform: perspective(800px) rotateY(360deg);
+    }
+
+    100% {
+      transform: perspective(800px) rotateY(0deg);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .deviant-circle {
+    height: 600px;
+
+    .char {
+      transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(290px);
+
+      &[data-char="T"] {
+        transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(290px)
+          rotateZ(180deg) translateY(4px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-sm-width) {
+  .deviant-circle {
+    height: 450px;
+
+    .char {
+      transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(210px);
+
+      &[data-char="T"] {
+        transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(210px)
+          rotateZ(180deg) translateY(4px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .deviant-circle {
+    height: 320px;
+
+    .char {
+      transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(140px);
+
+      &[data-char="T"] {
+        transform: rotateY(calc(var(--char-index) * 11.2deg)) translateZ(140px)
+          rotateZ(180deg) translateY(4px);
+      }
+    }
+  }
+}

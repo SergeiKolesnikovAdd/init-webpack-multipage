@@ -1,61 +1,196 @@
-@use "scss/global" as *;
+@use "../global" as *;
 
 /* Example include fonts from local file */
 // @include font-face("TTHoves", "../../fonts/some-path", normal);
 
 $text-colors: (
+  "whietA40": $whietA40,
   "white": $white,
   "black": $black,
+  "gray": $gray,
+  "red": $red,
 );
 
 .text {
-  color: map-get($text-colors, "black");
+  // color: map-get($text-colors, "black");
   font-style: normal;
+  font-weight: normal;
 
-  &_size {
+  &_type {
+    &_wow {
+      font-size: 300px;
+      line-height: 100%;
+    }
+
     &_h1 {
+      font-size: 108px;
+      line-height: 100%;
     }
 
     &_h2 {
+      font-size: 24px;
+      line-height: 130%;
     }
 
-    &_main {
+    &_common {
+      font-size: 18px;
+      line-height: 110%;
     }
 
     &_desc {
+      font-size: 18px;
+      line-height: 140%;
     }
   }
 
-  &_weight {
-    &_light {
-      font-weight: 300;
+  &_transform {
+    &_uppercase {
+      text-transform: uppercase;
     }
-
-    &_normal {
-      font-weight: 400;
-    }
-
-    &_medium {
-      font-weight: 500;
-    }
-
-    &_semi-bold {
-      font-weight: 600;
-    }
-
-    &_bold {
-      font-weight: 700;
-    }
-  }
-
-  &_uppercase {
-    text-transform: uppercase;
   }
 
   &_color {
     @each $color, $val in $text-colors {
       &_#{$color} {
         color: $val;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .text {
+    &_type {
+      &_wow {
+        font-size: 246px; //
+      }
+
+      &_h1 {
+        font-size: 98px; //
+      }
+
+      &_h2 {
+        font-size: 20px; //
+      }
+
+      &_common {
+        font-size: 16px; //
+      }
+
+      &_desc {
+        font-size: 16px; //
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .text {
+    &_type {
+      &_wow {
+        font-size: 222px;
+      }
+
+      &_h1 {
+        font-size: 82px;
+      }
+
+      &_common {
+        font-size: 14px;
+      }
+
+      &_desc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width-2) {
+  .text {
+    &_type {
+      &_h1 {
+        font-size: 72px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+
+  .text {
+    &_type {
+      &_wow {
+        font-size: 176px; //
+      }
+
+      &_h1 {
+        font-size: 58px; //
+      }
+
+      &_h2 {
+        font-size: 14px; //
+      }
+
+      &_common {
+        font-size: 12px; //
+      }
+
+      &_desc {
+        font-size: 14px; //
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-sm-width) {
+  .text {
+    &_type {
+      &_wow {
+        font-size: 140px; //
+      }
+
+      &_h1 {
+        font-size: 42px; //
+      }
+
+      &_h2 {
+        font-size: 14px;
+      }
+
+      &_common {
+        font-size: 12px;
+      }
+
+      &_desc {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+
+  .text {
+    &_type {
+      &_wow {
+        font-size: 120px; //
+      }
+
+      &_h1 {
+        font-size: 32px; //
+      }
+
+      &_h2 {
+        font-size: 16px;
+      }
+
+      &_common {
+        font-size: 12px;
+      }
+
+      &_desc {
+        font-size: 14px;
       }
     }
   }

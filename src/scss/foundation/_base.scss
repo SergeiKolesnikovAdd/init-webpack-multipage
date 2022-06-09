@@ -1,4 +1,4 @@
-@use "scss/global" as *;
+@use "../global" as *;
 
 html {
   background-color: $white;
@@ -7,6 +7,7 @@ html {
 
 main {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 .no-scroll {
@@ -14,9 +15,173 @@ main {
 }
 
 .main-padding {
-  padding-left: $size-40;
-  padding-right: $size-40;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-.section-margin-top {
+// added from .general 
+body {
+  font-family: $fontMain;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $bg;
+}
+
+textarea {
+  font-family: $fontMain;
+}
+
+.scroll-content {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.half {
+  width: 50%;
+}
+
+.T {
+  display: inline-block;
+  transform: rotate(180deg) translateY(3%);
+}
+
+.row {
+  display: flex;
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  pointer-events: all;
+  height: 1.2em;
+  display: inline-flex;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 1px;
+    transition: width 0.3s;
+    background-color: $black;
+  }
+
+  &:hover:before {
+    transition: width 0.3s, height 0s 0.25s;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: auto;
+  }
+
+  &_color {
+    &_white {
+      &::before {
+        background-color: $white;
+      }
+    }
+    &_gray {
+      &::before {
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+.main-padding {
+  padding-left: $offsetLg;
+  padding-right: $offsetLg;
+}
+
+.hover {
+  &_opacity {
+    &_m {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &_color {
+    &_red {
+      &:hover {
+        color: $red;
+
+        a,
+        span,
+        p {
+          color: $red;
+        }
+      }
+    }
+
+    &_white {
+      &:hover {
+        color: $white;
+
+        a,
+        span,
+        p {
+          color: $white;
+        }
+      }
+    }
+
+    &_gray {
+      &:hover {
+        color: $whietA40;
+
+        a,
+        span,
+        p {
+          color: $whietA40;
+        }
+      }
+    }
+}
+
+  &_transition {
+    &_xs {
+      transition: color 0.3s, background-color 0.3s, opacity 0.3s;
+
+      a,
+      span,
+      p {
+        transition: color 0.3s, background-color 0.3s, opacity 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .main-padding {
+    padding-left: $offsetMd;
+    padding-right: $offsetMd;
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .main-padding {
+    padding-left: $offsetSm;
+    padding-right: $offsetSm;
+  }
+
+  body {
+    .scrollbar-thumb {
+      &-y {
+        width: 4px;
+      }
+    }
+
+    .scrollbar-track {
+      &-y {
+        width: 4px;
+      }
+    }
+  }
 }

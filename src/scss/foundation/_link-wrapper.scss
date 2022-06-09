@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+.link-wrapper {
+  height: 1.2em;
+  display: inline-block;
+  overflow: hidden;
+
+  &_active {
+    .text {
+      display: inline-block;
+      transform: translateY(-100%);
+      transition: 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .link-wrapper {
+    height: 1.1em;
+  }
+}

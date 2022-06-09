@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head}}
+<body>
+  {{> header 
+      color-1="white"
+      color-2="black"
+      projects-link="/projects-eng.html"
+      height-2="height:100%"}}
+  {{> burger-menu
+      projects-link="/projects-eng.html"}}
+  <main class="main">
+    {{> intro-projects}}
+    {{> projects-all-projects}}
+    {{> ring-animation data-header-color="white" color="white"}}
+    {{> footer-white
+        theme-controller="ignore-theme"
+        button-color="white"
+        line-color="white"
+        main-color="white"
+        hover-color="gray"}} 
+  </main>
+</body>
+</html>

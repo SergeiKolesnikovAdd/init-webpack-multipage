@@ -5,6 +5,36 @@ import "@/common";
 /* import partials and lib */
 
 /* Your JS Code goes here */
-window.addEventListener("DOMContentLoaded", () => {});
+import { worksHeight } from '../../js/components/works-height';
+import { deviantCircle } from '../../js/utils/ring-animation';
+import { header } from '../../js/utils/header';
+import { linkWrapper } from '../../js/utils/link-wrapper';
+import { preloader } from '../../js/components/preloader';
+import { initBurgerMenu } from '../../js/components/burger-menu';
+import { checkTouchDevice } from '../../js/utils/adaptive';
+import { initScrollbar } from '../../js/components/scrollbars';
+import { initVHSize } from '../../js/components/vh-size';
+// import { initClock } from '../../js/utils/clock';
 
-window.addEventListener("load", () => {});
+preloader();
+
+window.addEventListener('DOMContentLoaded', () => {
+  const changeColorOfHeader = header();
+  const setHeightOfWorksBlock = worksHeight();
+  const setRotateX = deviantCircle();
+  
+
+  // initClock();
+  checkTouchDevice();
+  linkWrapper();
+  initBurgerMenu();
+  initVHSize();
+
+  function scrollEvent() {
+    changeColorOfHeader();
+    setHeightOfWorksBlock();
+    setRotateX();
+  }
+
+  initScrollbar(scrollEvent);
+});

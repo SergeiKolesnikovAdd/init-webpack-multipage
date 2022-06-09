@@ -2,8 +2,24 @@
 <html lang="ru">
 {{> head}}
 <body>
-  <main>
-
+  {{> preloader}}
+  {{> header 
+      color-1="black"
+      color-2="white"
+      main-link="/index-eng.html"
+      height-1="height:100%"
+  }}
+  {{> burger-menu
+      main-link="/index-eng.html"}}
+  <main class="main">
+    {{> intro-main}}
+    {{> projects-main}}
+    {{> ring-animation data-header-color="black" color="black"}}
+    {{> footer-black
+        button-color="main"
+        line-color="black"
+        main-color="black"
+        hover-color="red"}} 
   </main>
 </body>
 </html>

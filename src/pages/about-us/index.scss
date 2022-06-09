@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@use "../../scss/foundation" as *;
+
+/* List of sections used on this page: */
+@use "../../scss/sections/header.scss";
+@use "../../scss/components/burger-menu.scss";
+@use "../../scss/sections/about-us-special.scss";
+@use "../../scss/sections/ticker.scss";
+@use "../../scss/sections/about-us-intro.scss";
+@use "../../scss/sections/approach-to-work.scss";
+@use "../../scss/sections/our-offer.scss";
+@use "../../scss/sections/projects-about-us.scss";
+@use "../../scss/sections/ring-animation.scss";
+@use "../../scss/sections/footer.scss";
+@use "../../scss/components/seal.scss";
+@use "../../scss/components/advantages.scss";

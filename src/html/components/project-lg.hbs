@@ -1,0 +1,26 @@
+<a
+  href="{{url}}"
+  target="_blank"
+  class="work-item work-item_type_large responsive-height"
+  data-header-color="{{data-header-color}}"
+>
+  <div 
+    class="work-item__img" 
+    style="background-image: url('{{img}}')">
+  </div>
+  <div 
+    class="work-item__large-text-wrapper">
+    {{#if text-under-title}}
+      <span 
+        class="work-item__desc-large text text_type_desc text_color_gray {{theme-controller}}">
+        {{text-under-title}}
+      </span>
+    {{/if}}
+    <h2 
+      class="text text_color_{{tittle-color}} {{theme-controller}} text_type_h1 work-item__text-wrapper">
+      <div class="work-item__text-inner">
+        {{title}}
+      </div>
+    </h2>
+  </div>
+</a>

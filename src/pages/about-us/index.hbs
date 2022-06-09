@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{> head}}
+<body>
+  {{> header
+      color-1="black"
+      color-2="white"
+      about-us-link="/about-us-eng.html"
+      height-1="height:100%"}}
+  {{> burger-menu
+      theme-controller="ignore-theme"
+      about-us-link="/about-us-eng.html"}}
+  {{> about-bg}}
+  <main class="main">
+    {{> about-us-intro}}
+    {{> approach-to-work}}
+    {{> our-offer}}
+    {{> projects-about-us}}
+    {{> ring-animation data-header-color="white" color="white"}} 
+    {{> footer-white
+        theme-controller="ignore-theme"
+        button-color="white"
+        line-color="white"
+        main-color="white"
+        hover-color="gray"}}    
+  </main>
+</body>
+</html>

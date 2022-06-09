@@ -1,0 +1,139 @@
+<header class="header">
+  <div
+    class="header__overflow-wrapper header__overflow-wrapper_black header__overflow-wrapper_top"
+    {{#if height-1}}
+      style="{{height-1}}"
+    {{/if}}
+  >
+    <div class="header__overflow-inner main-padding">
+      <div class="half row">
+        <div class="half">
+          <a href="/index-eng.html" class="header__logo">
+            <div class="header__logo-devian-wrapper">
+              {{> logo-devian.svg fill="#242424" class-names="header__logo-devian-svg"}}
+            </div>
+            {{> logo-t.svg fill="#242424" class-names="header__logo-t-svg" }}
+          </a>
+        </div>
+        <div class="half">
+          <div class="link preloader-opacity preloader-appearance-step-0-0">
+            {{> language-switch-eng}}
+          </div>
+        </div>
+      </div>
+      <div class="half row">
+        <div class="half row">
+          {{> projects-link-eng class-names="link header__works preloader-opacity preloader-appearance-step-0-1"}}
+          {{> about-us-link-eng class-names="link preloader-opacity preloader-appearance-step-0-2"}}
+        </div>
+        <div class="half header__contacts">
+          {{> write-us-link-eng class-names="link preloader-opacity preloader-appearance-step-0-3"}}
+        </div>
+        <div
+            class="burger-btn preloader-opacity preloader-appearance-step-0-3"
+        >
+            <div class="burger-btn__line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div
+      class="header__overflow-wrapper header__overflow-wrapper_white header__overflow-wrapper_bottom"
+      {{#if height-2}}
+        style="{{height-2}}"
+      {{/if}}
+    >
+    <div class="header__overflow-inner main-padding">
+      <div class="half row">
+        <div class="half">
+          <a href="/index-eng.html" class="header__logo">
+            <div class="header__logo-devian-wrapper">
+              {{> logo-devian.svg fill="#242424" class-names="header__logo-devian-svg"}}
+            </div>
+            {{> logo-t.svg fill="#242424" class-names="header__logo-t-svg" }}
+          </a>
+        </div>
+        <div class="half">
+          <div class="link preloader-opacity preloader-appearance-step-0-0">
+            <div class="header__link-wrapper link-wrapper">
+              {{#if main-link}}
+                <a
+                  href="{{main-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>
+                <br />
+                <a
+                  href="{{main-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>  
+              {{/if}}
+              {{#if projects-link}}
+                <a
+                  href="{{projects-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>
+                <br />
+                <a
+                  href="{{projects-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>  
+              {{/if}}
+              {{#if about-us-link}}
+                <a
+                  href="{{about-us-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>
+                <br />
+                <a
+                  href="{{about-us-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>  
+              {{/if}}
+              {{#if write-us-link}}
+                <a
+                  href="{{write-us-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>
+                <br />
+                <a
+                  href="{{write-us-link}}"
+                  class="text ignore-theme text_color_black text_type_common text_transform_uppercase"
+                >
+                  RU
+                </a>  
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="half row">
+        <div class="half row">
+          {{> projects-link-eng class-names="link header__works preloader-opacity preloader-appearance-step-0-1"}}
+          {{> about-us-link-eng class-names="link preloader-opacity preloader-appearance-step-0-2"}}
+        </div>
+        <div class="half header__contacts">
+          {{> write-us-link-eng class-names="link preloader-opacity preloader-appearance-step-0-3"}}
+        </div>
+        <div
+          class="burger-btn preloader-opacity preloader-appearance-step-0-3"
+        >
+          <div class="burger-btn__line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

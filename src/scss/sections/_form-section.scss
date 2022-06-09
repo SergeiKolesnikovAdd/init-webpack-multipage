@@ -1,0 +1,195 @@
+@use "../global" as *;
+@use "../foundation" as *;
+
+.form-section {
+  padding-top: 260px;
+
+  &__ticker {
+    left: 0;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  &__title-row {
+    display: flex;
+  }
+
+  &__google-forms {
+    margin-top: $offsetLg;
+  }
+
+  &__google {
+    &_blue {
+      color: #4285f4;
+    }
+
+    &_red {
+      color: #ea4335;
+    }
+
+    &_yellow {
+      color: #fbbc05;
+    }
+
+    &_green {
+      color: #34a853;
+    }
+  }
+
+  &__google-item:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  &__main {
+    margin-top: 80px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__input {
+    border: 0;
+    width: 100%;
+    padding: 24px 0;
+    min-height: 80px;
+    background-color: transparent;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.4);
+  }
+
+  &__buttons-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $offsetLg;
+  }
+
+  &__plus {
+    cursor: pointer;
+    width: 158px;
+    height: 158px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $black;
+    position: relative;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    input {
+      display: none;
+    }
+
+    path {
+      transition: stroke 0.3s;
+    }
+
+    &:hover {
+      border-color: $red;
+      background-color: $red;
+
+      .text {
+        color: $red;
+      }
+
+      path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &__plus-text {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 20px);
+  }
+
+  &__plus-svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .form-section {
+    padding-top: 128px;
+
+    &__main {
+      margin-top: 40px;
+    }
+
+    &__buttons-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $offsetMd;
+    }
+
+    &__input {
+      padding: 18px 0;
+      min-height: 60px;
+    }
+
+    &__google-item:not(:last-of-type) {
+      margin-right: 14px;
+    }
+
+    &__plus-svg {
+      width: 40px;
+      height: 40px;
+
+      path {
+        stroke-width: 1.3333;
+      }
+    }
+
+    &__plus {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-sm-width) {
+  .form-section {
+    &__plus {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .form-section {
+    padding-top: 80px;
+
+    &__title-row {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-bottom: 36px;
+      width: 100%;
+    }
+
+    &__sub-title {
+      width: 100%;
+    }
+
+    &__main {
+      margin-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    &__buttons-row {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+
+    &__plus {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,46 +1,21 @@
 // colors
-$white: #fff;
-$black: #000;
+$black: #242424;
+$white: #ffffff;
+$whietA40: rgba(255, 255, 255, 0.4);
+$red: #e74141;
+$gray: #a2a2a3;
+$bg: #f8f8f8;
+
 
 // fonts
 $fontMain: Arial, sans-serif;
-
-//base
-$base-x: 4px;
-
-// font-size
-$font-size-4: $base-x;
-$font-size-8: 2 * $base-x;
-$font-size-12: 3 * $base-x;
-$font-size-16: 4 * $base-x;
-
-// size
-$size-4: $base-x;
-$size-8: 2 * $base-x;
-$size-12: 3 * $base-x;
-$size-16: 4 * $base-x;
-$size-20: 5 * $base-x;
-$size-24: 6 * $base-x;
-$size-28: 7 * $base-x;
-$size-32: 8 * $base-x;
-$size-36: 9 * $base-x;
-$size-40: 10 * $base-x;
-$size-44: 11 * $base-x;
-$size-48: 12 * $base-x;
-$size-52: 13 * $base-x;
-$size-56: 14 * $base-x;
-$size-60: 15 * $base-x;
-$size-64: 16 * $base-x;
-$size-68: 17 * $base-x;
-$size-72: 18 * $base-x;
-$size-76: 19 * $base-x;
-$size-80: 20 * $base-x;
 
 // media
 $desktop-xlg-width: 1920px;
 $desktop-lg-width: 1600px;
 $desktop-md-width: 1440px;
 $desktop-sm-width: 1280px;
+$desktop-sm-width-2: 1084px;
 $tablet-lg-width: 1024px;
 $tablet-sm-width: 768px;
 $phone-width: 600px;
@@ -49,3 +24,35 @@ $phone-width: 600px;
 $z-index-modal: 2000;
 $z-index-header: 1000;
 $z-index-burger: 100;
+
+// logo sizes
+$logoDevianWidthLg: 205px;
+$logoTWidthLg: 32px;
+$logoHeightLg: 40px;
+
+$logoDevianWidthMd: 164px;
+$logoTWidthMd: 26px;
+$logoHeightMd: 32px;
+
+$logoDevianWidthMd2: 164px * 0.625;
+$logoTWidthMd2: 26px * 0.625;
+$logoHeightMd2: 20px;
+
+$logoDevianWidthSm: 164px * 0.625 * 0.8;
+$logoTWidthSm: 26px * 0.625 * 0.8;
+$logoHeightSm: 16px;
+
+// offsets
+$baseX: 4px;
+$offsetXLg: 80px;
+$offsetLg: 40px;
+$offsetMd: 24px;
+$offsetMd2: 20px;
+$offsetSm: 12px;
+$offsetSm2: 16px;
+
+//seal sizes
+$sealLg: 220px;
+$sealMd: 160px;
+$sealMd2: 108px;
+$sealSm: 88px;
